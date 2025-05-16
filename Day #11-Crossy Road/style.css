@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  color: white;
+}
+
+/* General Button Styling */
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 3px 5px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* Counter Position */
+#counter {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* End Screen Styling */
+#end {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+
+#end button {
+  background-color: red;
+  padding: 20px 50px;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Controls Wrapper */
+#controlls {
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Controls Grid */
+#controlls div {
+  display: grid;
+  grid-template-columns: 50px 50px 50px;
+  grid-template-rows: auto auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  margin-bottom: 20px;
+}
+
+/* Buttons in Controls */
+#controlls button {
+  width: 100%;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+/* Make the top middle button span the whole row */
+#controlls button:first-of-type {
+  grid-column: 1 / -1;
+}
